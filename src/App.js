@@ -2,7 +2,12 @@ import React, {
   Component
 } from 'react';
 import './App.css';
-import { Route, withRouter } from 'react-router-dom';
+import { 
+  Route, 
+  withRouter, 
+  Switch, 
+  Redirect 
+} from 'react-router-dom';
 
 import LoginPage from './pages/Login';
 import HomePage from './pages/Home';
@@ -16,10 +21,13 @@ class App extends Component {
     return (
       <div>
         <Navigation />
+        <Switch>
         <Route exact path='/' component={HomePage} />
-        <Route path='/login' component={LoginPage} />
+        <Redirect from='/login/*' to='/login' />
+        <Route exact path='/login' component={LoginPage} />
         <Route exact path='/signup' component={SignupPage} />
         <Route path='/signup/:coupon' component={SignupPage} />
+        </Switch>
       </div>
     );
   }
