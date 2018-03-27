@@ -16,6 +16,7 @@ class App extends Component {
     return (
       <div>
         <Navigation />
+        <Route exact path='/' component={HomePage} />
         <Route path='/login' component={LoginPage} />
         <Route path='/signup' component={SignupPage} />
         {/* <HomePage />
