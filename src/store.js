@@ -30,6 +30,12 @@ const reducer = (state=initialState, action) => {
                 isLoggedIn: true,
                 username: action.payload.value.username
             }
+        case LOGOUT:
+            return {
+                ...state,
+                isLoggedIn: false,
+                username: ''
+            }
         default:
             return state;
     }
