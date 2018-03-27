@@ -22,11 +22,11 @@ class App extends Component {
       <div>
         <Navigation />
         <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Redirect from='/login/*' to='/login' />
-        <Route exact path='/login' component={LoginPage} />
-        <Route exact path='/signup' component={SignupPage} />
-        <Route path='/signup/:coupon' component={SignupPage} />
+          <Route exact path='/' component={HomePage} />
+          <Redirect from='/login/*' to='/login' />
+          <Route exact path='/login' component={LoginPage} />
+          <Route exact path='/signup' component={SignupPage} />
+          <Route path='/signup/:coupon' component={SignupPage} />
         </Switch>
       </div>
     );
