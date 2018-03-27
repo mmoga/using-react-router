@@ -18,7 +18,8 @@ class App extends Component {
         <Navigation />
         <Route exact path='/' component={HomePage} />
         <Route path='/login' component={LoginPage} />
-        <Route path='/signup' component={SignupPage} />
+        <Route exact path='/signup' component={SignupPage} />
+        <Route path='/signup/:coupon' component={SignupPage} />
       </div>
     );
   }
