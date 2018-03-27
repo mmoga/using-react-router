@@ -24,6 +24,12 @@ const initialState = {
 
 const reducer = (state=initialState, action) => {
     switch(action.type){
+        case LOGIN:
+            return {
+                ...state,
+                isLoggedIn: true,
+                username: action.payload.value.username
+            }
         default:
             return state;
     }
